@@ -3,7 +3,6 @@ import { Col, Row } from "react-bootstrap";
 import {
   DiJavascript1,
   DiReact,
-  DiNodejs,
   DiPython,
   DiJava,
 } from "react-icons/di";
@@ -20,10 +19,6 @@ function Techstack() {
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
       <Col xs={4} md={2} className="tech-icons">
         <DiJavascript1 />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-      <p className = "name_tech">Node</p>
-        <DiNodejs />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
       <p className = "name_tech">React</p>

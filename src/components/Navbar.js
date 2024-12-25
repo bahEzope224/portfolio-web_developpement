@@ -98,7 +98,7 @@ function NavBar() {
                 to="/contact"
                 onClick={() => updateExpanded(false)}
               >
-                <AiFillContacts style={{ marginBottom: "2px" }} /> Nous Contacter
+                <AiFillContacts style={{ marginBottom: "2px" }} /> Contact
               </Nav.Link>
             </Nav.Item>
 
@@ -114,7 +114,7 @@ function NavBar() {
 
             <Nav.Item className="fork-btn">
               <Button
-                href="https://github.com/bahEzope224/portfolio"
+                href="https://github.com/bahEzope224/portfolio-web_developpement"
                 target="_blank"
                 className="fork-btn-inner"
               >
