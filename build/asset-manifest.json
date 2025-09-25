@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/static/css/main.6be40ec6.chunk.css",
+    "main.js": "/static/js/main.80244367.chunk.js",
+    "main.js.map": "/static/js/main.80244367.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.cae91cb8.js",
+    "runtime-main.js.map": "/static/js/runtime-main.cae91cb8.js.map",
+    "static/css/2.d37f0467.chunk.css": "/static/css/2.d37f0467.chunk.css",
+    "static/js/2.e02dd3ea.chunk.js": "/static/js/2.e02dd3ea.chunk.js",
+    "static/js/2.e02dd3ea.chunk.js.map": "/static/js/2.e02dd3ea.chunk.js.map",
+    "static/js/3.30f3bf4f.chunk.js": "/static/js/3.30f3bf4f.chunk.js",
+    "static/js/3.30f3bf4f.chunk.js.map": "/static/js/3.30f3bf4f.chunk.js.map",
+    "static/js/4.d5de5761.chunk.js": "/static/js/4.d5de5761.chunk.js",
+    "static/js/4.d5de5761.chunk.js.map": "/static/js/4.d5de5761.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.609eeac9a00b96e37a1eb1ef325d64e2.js": "/precache-manifest.609eeac9a00b96e37a1eb1ef325d64e2.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.d37f0467.chunk.css.map": "/static/css/2.d37f0467.chunk.css.map",
+    "static/css/main.6be40ec6.chunk.css.map": "/static/css/main.6be40ec6.chunk.css.map",
+    "static/js/2.e02dd3ea.chunk.js.LICENSE.txt": "/static/js/2.e02dd3ea.chunk.js.LICENSE.txt",
+    "static/media/CV_2025-09-03_Ibrahima_Bah.pdf": "/static/media/CV_2025-09-03_Ibrahima_Bah.a2f04d20.pdf",
+    "static/media/about.eedcc122.png": "/static/media/about.eedcc122.png",
+    "static/media/avatar.6a797c75.png": "/static/media/avatar.6a797c75.png",
+    "static/media/disneyplus.82757861.png": "/static/media/disneyplus.82757861.png",
+    "static/media/style.css": "/static/media/pre.6030f73e.svg",
+    "static/media/home-main.svg": "/static/media/home-main.9516a599.svg",
+    "static/media/img-savenelec.509af5fa.png": "/static/media/img-savenelec.509af5fa.png",
+    "static/media/jo2024.4c910900.png": "/static/media/jo2024.4c910900.png",
+    "static/media/perfobourse.77131e0f.png": "/static/media/perfobourse.77131e0f.png",
+    "static/media/projet-biblo.943d96dc.png": "/static/media/projet-biblo.943d96dc.png",
+    "static/media/qalamsoftware.6c96520c.png": "/static/media/qalamsoftware.6c96520c.png",
+    "static/media/veille-technologique.a9f59aae.png": "/static/media/veille-technologique.a9f59aae.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.cae91cb8.js",
+    "static/css/2.d37f0467.chunk.css",
+    "static/js/2.e02dd3ea.chunk.js",
+    "static/css/main.6be40ec6.chunk.css",
+    "static/js/main.80244367.chunk.js"
+  ]
+}
