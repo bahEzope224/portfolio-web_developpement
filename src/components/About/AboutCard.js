@@ -31,7 +31,7 @@ function AboutCard() {
               <ImPointRight /> Lecture
             </li>
             <li className="about-activity">
-              <ImPointRight /> Cuisiner
+              <ImPointRight /> Intelligence Artificiel
             </li>
             <li className="about-activity">
               <ImPointRight /> Cinéma

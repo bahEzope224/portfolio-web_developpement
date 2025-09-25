@@ -5,22 +5,33 @@ import Card from "react-bootstrap/Card";
 function ScolarParcours() {
   return (
     <Card className="quote-card-view">
-      <Card.Body>
-        <blockquote className="blockquote mb-0">
+  <Card.Body>
+  <blockquote className="blockquote mb-0">
 
-            <h1>C'est quoi le <strong className="purple">BTS SIO</strong></h1>
-            <br />
+    <h1>La <strong className="purple">Licence Professionnelle Data Mining & Statistique Décisionnelle</strong></h1>
+    <br />
 
-            <p style={{ textAlign: "justify" }}>
-            Le BTS <span className="yellow">Services informatiques aux Organisations</span>,
-            permet d’apprendre à exploiter des <strong className="purple">données</strong>, enseigne les bases de la <strong className="purple">programmation </strong>, du développement <strong className="purple"> d’applications </strong>et apporte des enseignements sur le fonctionnement d’une <strong className="purple">entreprise. </strong>
-            <br />
-            <br />
-            Le <strong className="purple"> BTS SIO </strong>apporte des compétences dans le support et la mise à disposition de services informatiques, ainsi qu’en cybersécurité. À la fin du premier semestre, il propose deux options (<strong className="purple">SISR et SLAM </strong>) qui délivrent chacune une compétence supplémentaire : <strong className="purple">l’administration des systèmes et des réseaux (SISR) </strong> ou <strong className="purple">la conception et le développement d'applications (SLAM). </strong>
+    <p style={{ textAlign: "justify" }}>
+      Cette formation forme des spécialistes capables d’exploiter et de valoriser de larges volumes de 
+      <strong className="purple"> données</strong> pour aider à la prise de décision.  
+      Elle combine l’apprentissage des méthodes de <strong className="purple">statistique appliquée</strong>, 
+      de <strong className="purple">data mining</strong> (exploration et analyse de données), 
+      ainsi que des bases solides en <strong className="purple">programmation</strong> 
+      et en <strong className="purple">gestion de bases de données</strong>.
+      <br /><br />
+      La formation met également l’accent sur la <strong className="purple">visualisation de données</strong>, 
+      la <strong className="purple">modélisation prédictive</strong> et l’utilisation d’outils 
+      professionnels comme R, Python ou SQL.  
+      Elle prépare à des métiers tels que <strong className="purple">data analyst</strong>,  
+      <strong className="purple"> statisticien décisionnel</strong> ou 
+      <strong className="purple"> consultant en business intelligence</strong>, 
+      en développant des compétences directement opérationnelles pour les secteurs de la finance, du marketing, 
+      de l’industrie ou des services.
+    </p>
 
-          </p>
-        </blockquote>
-      </Card.Body>
+  </blockquote>
+</Card.Body>
+
     </Card>
   );
 }

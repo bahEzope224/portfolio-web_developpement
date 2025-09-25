@@ -3,13 +3,10 @@ import { Col, Row } from "react-bootstrap";
 import {
   SiVisualstudiocode,
   SiUbuntu,
-  SiWordpress,
   SiLinux,
   SiGit,
-  SiElementor,
   SiJupyter,
   SiTrello,
-  SiPhpmyadmin,
   SiDataiku,
   SiPowerbi,
   SiLooker,
