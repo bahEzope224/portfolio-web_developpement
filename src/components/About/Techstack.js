@@ -8,10 +8,10 @@ import {
 } from "react-icons/di";
 import {
   SiPhp,
-  SiHtml5,
-  SiCss3,
-  SiJquery,
-  SiBootstrap,
+  SiR,
+  SiSass,
+  SiJupyter,
+  SiPandas,
 } from "react-icons/si";
 
 function Techstack() {
@@ -26,31 +26,31 @@ function Techstack() {
       </Col>
       
       <Col xs={4} md={2} className="tech-icons">
-      <p className = "name_tech">HTML</p>
-        <SiHtml5 />
+      <p className = "name_tech">R</p>
+        <SiR />
       </Col>
 
       <Col xs={4} md={2} className="tech-icons">
-      <p className = "name_tech">CSS</p>
+      <p className = "name_tech">SAS</p>
         
-        <SiCss3 />
+        <SiSass />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
       <p className = "name_tech">PHP</p>
         <SiPhp />
       </Col>
+
       <Col xs={4} md={2} className="tech-icons">
-      <p className = "name_tech">Jquery</p>
-        <SiJquery />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-      <p className = "name_tech">bootstrap</p>
-        <SiBootstrap />
+      <p className = "name_tech">Jupyter</p>
+        <SiJupyter />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
       <p className = "name_tech">Python</p>
-        
         <DiPython />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+      <p className = "name_tech">Pandas</p>
+        <SiPandas />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
       <p className = "name_tech">java</p>

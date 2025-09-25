@@ -19,27 +19,27 @@ function Home2() {
               Laissez <span className="purple">MOI</span> me présenter
             </h1>
             <p className="home-about-body">
-              Je suis passionné par la programmation et les nouvelles technologies. Je suis toujours en recherche de nouvelles
+              Je suis passionné par la manipulation de donnée et les nouvelles technologies liée a donnée et à l'intelligence artificiel. Je suis toujours en recherche de nouvelles
                <strong className="purple">OPPORTUNITES</strong> pour acquérir de nouvelles compétences et <strong className="purple">ENRICHIR</strong>
                 mes connaisances;  
               <br />
-              <br />Je suis très à l'aise avec les langages de programmation classiques comme
+              <br />Je suis très à l'aise avec les outils d'analyse de données comme
               <i>
-                <b className="purple"> HTML/CSS, JavaScript, PHP, SQL et Python. </b>
+                <b className="purple"> SQL, R, SAS, SQL et Python. </b>
               </i>
               <br />
               <br />
               Mes domaines d'intérêt sont les &nbsp;
               <i>
-                <b className="purple">nouvelles technologies</b>,
-                ainsi que ceux liés à {" "}
+                <b className="purple">technologie liée a la fintech mais aussi</b>,
+                 ceux liés à {" "}
                 <b className="purple">
                 la DATA, l'IA, les applications Web et la cybersécurité.
                 </b>
               </i>
               <br />
               <br />
-              Je maîtrise aussi quelques frameworks comme <b className="purple">react.js | bootstrap | SAAS | jQuery</b>  
+              Je maîtrise aussi quelques technologie comme <b className="purple">Power BI | DATAIKU | LOOKER | MongoBD</b>  
             </p>
           </Col>
           <Col md={4} className="myAvtar">

@@ -30,7 +30,7 @@ function Contact() {
             
             <li className="social-icons">
               <a
-                href="mailto:bahibrahima245857@gmail.com"
+                href="mailto:bahibrahimatalibe@gmail.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="icon-colour  home-social-icons"

@@ -10,6 +10,12 @@ import {
   SiJupyter,
   SiTrello,
   SiPhpmyadmin,
+  SiDataiku,
+  SiPowerbi,
+  SiLooker,
+  SiMysql,
+  SiMongodb,
+  SiKibana,
 } from "react-icons/si";
 
 function Toolstack() {
@@ -29,8 +35,8 @@ function Toolstack() {
         <SiUbuntu />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-      <p className = "name_tech">WordPress</p>
-        <SiWordpress />
+      <p className = "name_tech">Dataiku</p>
+        <SiDataiku />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
       <p className = "name_tech">GIT</p>
@@ -38,9 +44,9 @@ function Toolstack() {
         <SiGit />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-      <p className = "name_tech">Elementor</p>
+      <p className = "name_tech">PowerBI</p>
 
-        <SiElementor />
+        <SiPowerbi />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
       <p className = "name_tech">Trello</p>
@@ -53,10 +59,26 @@ function Toolstack() {
         <SiJupyter />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-      <p className = "name_tech">PhpMyadmin</p>
+      <p className = "name_tech">Looker</p>
 
-        <SiPhpmyadmin />
+        <SiLooker />
       </Col>
+      <Col xs={4} md={2} className="tech-icons">
+      <p className = "name_tech">MySQL</p>
+
+        <SiMysql />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+      <p className = "name_tech">MongoDB</p>
+
+        <SiMongodb />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+      <p className = "name_tech">Kibana</p>
+
+        <SiKibana />
+      </Col>
+      
     </Row>
   );
 }
