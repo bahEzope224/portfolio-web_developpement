@@ -1,4 +1,43 @@
-node_modules
-/build
+# Dependencies
+node_modules/
 
-.env.local 
+# Build folders
+/build
+/dist
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE / Editor
+.vscode/
+.idea/
+
+# Firebase
+.firebase/
+firestore-debug.log
+ui-debug.log
+
+# Python (si backend Flask)
+__pycache__/
+*.py[cod]
+*.sqlite3
+instance/
+
+# Coverage
+coverage/
+
+# Misc
+*.pem
