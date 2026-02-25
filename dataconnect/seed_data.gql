@@ -1,0 +1,141 @@
+mutation CreateDemoData @transaction @auth(level: USER, insecureReason: "This is a seed mutation and should only be run by authenticated users for development purposes.") {
+  user_insertMany(data: [
+    {
+      id: "c460021c-5d97-4009-8800-4b82d36d8f2b",
+      displayName: "Ibrahima Diallo",
+      email: "ibrahima.diallo@example.com",
+      createdAt: "2023-01-01T10:00:00Z",
+      bio: "Full-stack developer with a passion for creating impactful web applications.",
+      jobTitle: "Software Engineer",
+      location: "Paris, France",
+      websiteUrl: "https://ibrahima-diallo.dev",
+      githubUrl: "https://github.com/ibrahima-diallo",
+      linkedinUrl: "https://linkedin.com/in/ibrahima-diallo"
+    },
+    {
+      id: "a1b2c3d4-e5f6-7890-1234-567890abcdef",
+      displayName: "Alice Smith",
+      email: "alice.smith@example.com",
+      createdAt: "2023-02-15T11:30:00Z",
+      bio: "Experienced UI/UX designer, focused on user-centered design principles.",
+      jobTitle: "Product Designer",
+      location: "London, UK",
+      websiteUrl: "https://alicesmith.design",
+      githubUrl: "https://github.com/alicesmith",
+      linkedinUrl: "https://linkedin.com/in/alicesmith"
+    }
+  ])
+  category_insertMany(data: [
+    {
+      id: "1a2b3c4d-5e6f-7890-1234-567890abcdef",
+      userId: "c460021c-5d97-4009-8800-4b82d36d8f2b",
+      name: "Web Development"
+    },
+    {
+      id: "2b3c4d5e-6f7a-8901-2345-67890abcdef1",
+      userId: "c460021c-5d97-4009-8800-4b82d36d8f2b",
+      name: "Mobile Development"
+    },
+    {
+      id: "3c4d5e6f-7a8b-9012-3456-7890abcdef23",
+      userId: "a1b2c3d4-e5f6-7890-1234-567890abcdef",
+      name: "UI/UX Design"
+    }
+  ])
+  project_insertMany(data: [
+    {
+      id: "p1-uuid-1234-5678-90ab",
+      userId: "c460021c-5d97-4009-8800-4b82d36d8f2b",
+      title: "Portfolio Website v3",
+      description: "My personal portfolio website showcasing my latest projects and skills.",
+      createdAt: "2023-03-01T14:00:00Z",
+      liveDemoUrl: "https://my-portfolio-v3.com",
+      sourceCodeUrl: "https://github.com/ibrahima-diallo/portfolio-v3",
+      isPublic: true
+    },
+    {
+      id: "p2-uuid-5678-90ab-cdef",
+      userId: "c460021c-5d97-4009-8800-4b82d36d8f2b",
+      title: "E-commerce Backend API",
+      description: "A robust backend API for an e-commerce platform, built with Node.js and PostgreSQL.",
+      createdAt: "2023-05-10T09:00:00Z",
+      liveDemoUrl: null,
+      sourceCodeUrl: "https://github.com/ibrahima-diallo/ecommerce-api",
+      isPublic: true
+    },
+    {
+      id: "p3-uuid-90ab-cdef-1234",
+      userId: "a1b2c3d4-e5f6-7890-1234-567890abcdef",
+      title: "Mobile App Redesign",
+      description: "Redesigned the user interface and experience for a popular mobile application.",
+      createdAt: "2023-04-20T16:00:00Z",
+      liveDemoUrl: "https://app-redesign-mockup.com",
+      sourceCodeUrl: null,
+      isPublic: false
+    }
+  ])
+  projectCategory_insertMany(data: [
+    {
+      projectId: "p1-uuid-1234-5678-90ab",
+      categoryId: "1a2b3c4d-5e6f-7890-1234-567890abcdef" # Web Development
+    },
+    {
+      projectId: "p2-uuid-5678-90ab-cdef",
+      categoryId: "1a2b3c4d-5e6f-7890-1234-567890abcdef" # Web Development
+    },
+    {
+      projectId: "p3-uuid-90ab-cdef-1234",
+      categoryId: "3c4d5e6f-7a8b-9012-3456-7890abcdef23" # UI/UX Design
+    }
+  ])
+  media_insertMany(data: [
+    {
+      projectId: "p1-uuid-1234-5678-90ab",
+      url: "https://example.com/portfolio-v3-screenshot1.png",
+      mediaType: "image",
+      altText: "Screenshot of Portfolio Website v3 homepage",
+      position: 1
+    },
+    {
+      projectId: "p1-uuid-1234-5678-90ab",
+      url: "https://example.com/portfolio-v3-screenshot2.png",
+      mediaType: "image",
+      altText: "Screenshot of Portfolio Website v3 projects page",
+      position: 2
+    },
+    {
+      projectId: "p3-uuid-90ab-cdef-1234",
+      url: "https://example.com/mobile-app-redesign-mockup.png",
+      mediaType: "image",
+      altText: "Mockup of redesigned mobile app interface",
+      position: 1
+    }
+  ])
+  skill_insertMany(data: [
+    {
+      userId: "c460021c-5d97-4009-8800-4b82d36d8f2b",
+      name: "React",
+      proficiency: "Expert"
+    },
+    {
+      userId: "c460021c-5d97-4009-8800-4b82d36d8f2b",
+      name: "Node.js",
+      proficiency: "Advanced"
+    },
+    {
+      userId: "c460021c-5d97-4009-8800-4b82d36d8f2b",
+      name: "PostgreSQL",
+      proficiency: "Intermediate"
+    },
+    {
+      userId: "a1b2c3d4-e5f6-7890-1234-567890abcdef",
+      name: "Figma",
+      proficiency: "Expert"
+    },
+    {
+      userId: "a1b2c3d4-e5f6-7890-1234-567890abcdef",
+      name: "User Research",
+      proficiency: "Advanced"
+    }
+  ])
+}

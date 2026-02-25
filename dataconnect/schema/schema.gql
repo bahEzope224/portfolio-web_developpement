@@ -1,0 +1,46 @@
+type User @table {
+  displayName: String!
+  email: String!
+  createdAt: Timestamp!
+  photoUrl: String
+  bio: String
+  jobTitle: String
+  location: String
+  websiteUrl: String
+  githubUrl: String
+  linkedinUrl: String
+}
+
+type Project @table {
+  user: User
+  title: String!
+  description: String!
+  createdAt: Timestamp!
+  liveDemoUrl: String
+  sourceCodeUrl: String
+  isPublic: Boolean
+}
+
+type Category @table {
+  user: User
+  name: String!
+}
+
+type ProjectCategory @table(key: ["project", "category"]) {
+  project: Project!
+  category: Category!
+}
+
+type Media @table {
+  project: Project
+  url: String!
+  mediaType: String!
+  altText: String
+  position: Int
+}
+
+type Skill @table {
+  user: User
+  name: String!
+  proficiency: String
+}

@@ -1,0 +1,48 @@
+query GetPublicProjects @auth(level: PUBLIC, insecureReason: "This operation is safe to expose to the public as it only retrieves public projects.") {
+  projects(where: {isPublic: {eq: true}}) {
+    id
+    title
+    description
+    liveDemoUrl
+    sourceCodeUrl
+    createdAt
+    user {
+      displayName
+    }
+    categories_via_ProjectCategory {
+      name
+    }
+    medias_on_project {
+      url
+      mediaType
+      altText
+      position
+    }
+  }
+}
+
+query GetMySkills @auth(level: USER, insecureReason: "This operation is safe to expose to all logged in users as it only retrieves the current user's skills.") {
+  skills(where: {userId: {eq_expr: "auth.uid"}}) {
+    id
+    name
+    proficiency
+  }
+}
+
+mutation CreateNewProject($title: String!, $description: String!, $liveDemoUrl: String, $sourceCodeUrl: String, $isPublic: Boolean!) @auth(level: USER) {
+  project_insert(data: {
+    userId_expr: "auth.uid",
+    title: $title,
+    description: $description,
+    liveDemoUrl: $liveDemoUrl,
+    sourceCodeUrl: $sourceCodeUrl,
+    isPublic: $isPublic,
+    createdAt_expr: "request.time"
+  })
+}
+
+mutation UpdateUserBio($bio: String!) @auth(level: USER) {
+  user_update(key: {id_expr: "auth.uid"}, data: {
+    bio: $bio
+  })
+}

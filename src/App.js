@@ -12,6 +12,19 @@ import Contact from "./components/Contact/Contact";
 import Privacy from "./components/privacy"
 import CookieConsent from "react-cookie-consent";
 
+// --- Contexte Auth ---
+import { AuthProvider } from "./context/AuthContext";
+
+// --- Admin ---
+import Login from "./components/Admin/Login";
+import AdminLayout from "./components/Admin/AdminLayout";
+import Dashboard from "./components/Admin/Dashboard";
+import ProjectsManager from "./components/Admin/ProjectsManager";
+import ExperiencesManager from "./components/Admin/ExperiencesManager";
+import SkillsManager from "./components/Admin/SkillsManager";
+import CVManager from "./components/Admin/CVManager";
+import PrivateRoute from "./components/Admin/PrivateRoute";
+
 import {
   BrowserRouter as Router,
   Route,
@@ -35,11 +48,9 @@ function App() {
   }, []);
 
   return (
-    <Router>
-      <Preloader load={load} />
-      <div className="App" id={load ? "no-scroll" : "scroll"}>
-        <Navbar />
-        <ScrollToTop />
+    <AuthProvider>
+      <Router>
+
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/project" element={<Projects />} />
@@ -52,24 +63,49 @@ function App() {
 
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
-        <CookieConsent
-           location="bottom"
-           cookieName="cookieConsent"
-           style={{ background: "#333" }}
-           buttonStyle={{ color: "#fff", fontSize: "13px" }}
-           declineButtonStyle={{ color: "#fff", fontSize: "13px" }}
-           buttonText="Accepter"
-           declineButtonText="Refuser"
-           expires={1}
-         >
-           Ce site utilise des cookies pour améliorer votre expérience.{" "}
-           <span style={{ fontSize: "10px" }}>
-             Pour en savoir plus, consultez <a href="/privacy">notre politique de confidentialité</a>.
-           </span>
-        </CookieConsent>
-        <Footer />
-      </div>
-    </Router>
+        {/* ══════════════════════════════════
+           ROUTE DE CONNEXION ADMIN
+          ══════════════════════════════════ */}
+
+        <Route path="/admin/login" element={<Login />} />
+
+        {/* ══════════════════════════════════
+              ROUTES ADMIN PROTÉGÉES
+          ══════════════════════════════════ */}
+        <Route element={<PrivateRoute />}>
+          <Route element={<AdminLayout />}>
+            <Route path="/admin" element={<Navigate to="/admin/dashboard" replace />} />
+            <Route path="/admin/dashboard" element={<Dashboard />} />
+            <Route path="/admin/projects" element={<ProjectsManager />} />
+            <Route path="/admin/experiences" element={<ExperiencesManager />} />
+            <Route path="/admin/skills" element={<SkillsManager />} />
+            <Route path="/admin/cv" element={<CVManager />} />
+          </Route>
+        </Route>      <Preloader load={load} />
+        <div className="App" id={load ? "no-scroll" : "scroll"}>
+          <Navbar />
+          <ScrollToTop />
+
+          <CookieConsent
+            location="bottom"
+            cookieName="cookieConsent"
+            style={{ background: "#333" }}
+            buttonStyle={{ color: "#fff", fontSize: "13px" }}
+            declineButtonStyle={{ color: "#fff", fontSize: "13px" }}
+            buttonText="Accepter"
+            declineButtonText="Refuser"
+            expires={1}
+          >
+            Ce site utilise des cookies pour améliorer votre expérience.{" "}
+            <span style={{ fontSize: "10px" }}>
+              Pour en savoir plus, consultez <a href="/privacy">notre politique de confidentialité</a>.
+            </span>
+          </CookieConsent>
+          <Footer />
+        </div>
+      </Router>
+    </AuthProvider>
+
   );
 }
 
